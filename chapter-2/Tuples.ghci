@@ -1,0 +1,30 @@
+-- FST FUNCTION
+fst (8, 11)
+
+-- SND FUNCTION
+snd (8, 11)
+
+-- ZIP FUNCTION
+zip [1,2,3,4,5] [5,5,5,5,5]
+
+zip [1 .. 5] ["one", "two", "three", "four", "five"]
+
+-- when list lengths do not match
+zip [5,3,2,6,2,7,2,5,4,6,6] ["im","a","turtle"]
+
+-- finite lists can be paired with inifinte lists
+zip [1..] ["apple", "orange", "cherry", "mango"]
+
+
+-- A SIMPLE PROBLEM AS AN EXAMPLE TO FINISH THIS SECTION
+-- which right triangle that has integers for all sides and all sides equal to or smaller
+-- than 10 has a perimeter of 24?
+
+lengthList = [1..10]
+triangles = [(a, b, c) | a <- lengthList, b <- lengthList, c <- lengthList]
+
+rightTriangles = [(a, b, c) | (a, b, c) <- triangles, a^2 + b^2 == c^2]
+rightTriangles' = [(a, b, c) | (a, b, c) <- rightTriangles, a+b+c == 24]
+
+rightTriangles
+rightTriangles'

@@ -1,0 +1,84 @@
+-- DEFINING LISTS
+lostNumbers = [4, 8, 15, 16, 23, 42]
+lostNumbers
+
+-- ++ OPERATOR TO APPEND A LIST TO THE END OF ANOTHER LIST
+[1, 2, 3, 4] ++ [9, 10, 11, 12]
+"hello" ++ " " ++ "world"
+['w', 'o'] ++ ['o', 't']
+
+-- : ALSO CALLED CONS OPERATOR,TO APPEND A LIST TO THE START OF ANOTHER LIST
+'A' : " SMALL CAT"
+5:[1,2,3,4,5]
+
+-- INDEXING LISTS
+"Steve Buscem" !! 6
+[9.4,33.2,96.2,11.2,23.25] !! 1
+
+-- INDEXING NESTED LISTS
+testList = [[9.4, 33.2], [96.2, 11.2, 23.25], []]
+testList !! 1 !! 2
+
+
+-- LIST COMPARISON
+testList !! 0 < testList !! 1
+testList !! 0 > testList !! 1
+testList !! 0 >= testList !! 1
+testList !! 0 /= testList !! 1
+
+-- LIST FUNCTIONS
+-- head
+head testList
+
+-- tail
+tail testList
+
+-- last
+last testList
+
+-- init
+init testList
+
+-- length
+length testList
+
+-- null
+null testList
+null emptyList
+
+-- reverse
+reverse testList
+
+-- take
+take 3 testList
+
+-- drop
+drop 3 testList
+
+-- maximum
+maximum testList
+
+-- minimum
+minimum testList
+
+-- sum
+sum (testList !! 0)
+
+-- product
+product (testList !! 0)
+
+-- elem
+elem 2 (testList !! 0)
+
+-- FUNCTIONS ON EMPTY LISTS
+emptyList = []
+
+-- these all return errors
+-- head emptyList
+-- tail emptyList
+-- last emptyList
+-- init emptyList
+
+
+
+

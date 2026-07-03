@@ -1,0 +1,35 @@
+-- DEFINING LISTS USING RANGES
+-- range of integers
+[1..20]
+
+-- range of letters
+['a'..'z']
+['A'..'Z']
+
+-- steps
+[2, 3..17]
+
+
+-- ranges is reverse order
+[20..1] -- will return an empty list
+[20, 19..1]
+
+-- ranges of floats
+[0.1, 0.3..1] -- when [0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+
+
+-- INFINITE LISTS
+-- simply do not specify an upper limit for a range
+take 24 [13, 26..] -- the first 24 elements of multiples of 13
+
+-- some functions for creating infinite lists
+-- cycle
+-- cycle [1, 2, 3] this cmmand will not terminate, be careful
+take 10 (cycle [1, 2, 3])
+
+take 12 (cycle "LOL ")
+
+-- repeat
+take 3 (repeat 10)
+-- or alternatively
+replicate 3 10

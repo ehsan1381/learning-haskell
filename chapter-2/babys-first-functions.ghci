@@ -1,0 +1,28 @@
+--- COMPILE AND LOAD FUNCTION doubleMe
+-- :l doubleMe.hs
+:l double.hs
+
+
+--- RUNNING FUNCTION
+doubleMe 9
+doubleMe 8.3
+
+--- LOAD AND RUN doubleUs
+-- :l doubleUs.hs
+-- doubleUs 4 9
+-- doubleUs 2.3 34.2
+-- doubleUs 28 88 + doubleMe 123
+-- returns an error doubleMe not in scope. will write both functions
+-- in one file
+
+-- LOAD AND RUN doubleUs and doubleMe
+:load double.hs
+doubleUs 28 88 + doubleMe 123
+
+-- FUNCTION doubleSmallNumber
+doubleSmallNumber 99
+doubleSmallNumber 101
+
+-- FUNCTION doubleSmallNumber'
+doubleSmallNumber' 99
+doubleSmallNumber' 101
