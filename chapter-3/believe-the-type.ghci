@@ -1,0 +1,26 @@
+-- CHECKING EXPRESSION TYPE IN GHCI
+:t 'a'
+:t True
+:t "HELLO"
+:t (True, 'a')
+:t 4 == 5
+
+-- TYPE DECLERATION FOR FUNCTIONS
+-- remove non uppercase function with type decleration
+-- removeNonUppercase :: [Char] -> [Char]
+removeNonUppercase st = [c | c <- st, c `elem` ['A'..'Z']]
+
+-- alternatively we can write
+-- removeNonUppercase :: String -> String
+
+
+-- TYPE DECLERATION FOR FUNCTION OF SEVERAL PARAMETERS
+-- takes three integers and outputs their sum
+ -- addThree :: Int -> Int -> Int -> Int
+addThree x y z = x + y + z
+
+-- COMMON TYPES
+-- factorial :: Integer -> Integer
+factorial n = product [1..n]
+
+factorial 50

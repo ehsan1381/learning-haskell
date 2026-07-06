@@ -1,0 +1,4 @@
+-- TYPE VARIABLES
+:t head
+
+:t fst

@@ -1,0 +1,11 @@
+-- Eq TYPECLASS
+:t (==)
+
+:t elem
+
+-- ORD
+"asldkfjadslfkj" < "Zebra"
+
+"asldkfjadslfkj" `compare` "Zebra"
+
+-- SHOW
