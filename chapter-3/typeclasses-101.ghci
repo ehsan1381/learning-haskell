@@ -9,3 +9,55 @@
 "asldkfjadslfkj" `compare` "Zebra"
 
 -- SHOW
+show 3
+show 5.334
+show True
+
+-- READ
+-- read "True"
+(read "True") || False
+
+-- specifying output type
+read "5" :: Int
+read "5" :: Float
+
+-- if we want to use the return value in the same line
+(read "5" :: Float) * 4
+
+read "[1,2,3,4]" :: [Int]
+read "(3, 'a')" :: (Int, Char)
+
+-- ENUM
+ -- pred () returns an error bad argument
+ -- succ True returns bad argument
+succ 'e'
+-- succ GT returns bad argument
+succ 3
+succ 100000000000000000000
+succ 1.01
+succ pi
+
+
+-- BOUNDED
+minBound :: Int
+maxBound :: Char
+maxBound :: Bool
+maxBound :: (Bool, Int, Char)
+
+-- NUM
+-- in cases when we want to use numbers of different types
+-- in one expression or statement we will get a type error
+-- to fix this, we can either convert all to one type so
+-- they are compatible, or convert all to a general type as
+-- demonstrated in this example
+testList = [1, 2, 3, 4]
+
+-- this will return a type error
+-- (length testList) + 3.2
+
+-- this line will convert length to a general numeric
+-- and then compute
+fromIntegral (length testList) + 3.2
+:t fromIntegral (length testList) + 3.2
+-- fromIntegral (length testList) + 3.2 :: Fractional a => a
+
